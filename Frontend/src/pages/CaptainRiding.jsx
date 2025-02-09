@@ -18,7 +18,7 @@ const CaptainRiding = () => {
 
       <div className="relative h-1/5 bg-yellow-400 flex items-center justify-evenly">
         <h4 className="text-lg font-medium">4Km Away </h4>
-        <button className="px-10 py-3 font-semibold bg-green-400 rounded-md text-white">
+        <button className="px-8 py-3 text-lg font-semibold bg-green-400 rounded-md text-white">
           Complete Ride
         </button>
 

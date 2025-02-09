@@ -31,7 +31,7 @@ const ConfirmRidePanel = ({setConfirmRidePanelOpen,setLookingForRidePanelOpen}) 
                 <hr />
               </div>
             </div>
-            <div className="flex items-center gap-4 px-2 l ">
+            <div className="flex items-center gap-4 px-2  ">
             <i className="ri-square-fill "></i>
               <div className="w-full">
                 <h1 className="text-xl font-medium mb-1">Third Wave Coffee</h1>

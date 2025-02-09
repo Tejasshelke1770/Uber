@@ -12,7 +12,7 @@ const LocationSearchPanel = ({setVehiclePanelOpen,setPanelOpen}) => {
    <div>
     {locations.map((el,i)=>{
       return  <div key={i}>
-      <div onClick={()=>{setVehiclePanelOpen(true), setPanelOpen(false) }}  className=" flex items-center gap-4 py-2 active:bg-[#eeeeee] rounded-xl my-2">
+      <div className=" flex items-center gap-4 py-2 active:bg-[#eeeeee] rounded-xl my-2" onClick={()=>{setVehiclePanelOpen(true), setPanelOpen(false) }}  >
         <i className="ri-map-pin-2-fill text-lg bg-[#e1dedeee] py-2 px-3 rounded-full"></i>
         <h4 className="font-medium ">
           {el}

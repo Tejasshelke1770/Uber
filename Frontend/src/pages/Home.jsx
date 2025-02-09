@@ -1,5 +1,4 @@
 import React, { useContext, useRef, useState } from "react";
-import { UserContext } from "../context/userContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
@@ -104,9 +103,9 @@ const Home = () => {
         />
       </div>
 
-      {/* Search Panel */}
+      {/* Search Panel and search results */}
       <div className="h-screen w-full flex flex-col justify-end absolute bottom-0 rounded-md ">
-        <div className="h-[30%] p-6 bg-white relative ">
+        <div className="h-[30%] p-6 z-10 bg-white relative ">
           <div className="flex justify-between">
             <h1 className="text-2xl font-semibold mb-4">Find a trip</h1>
             {panelOpen && (
@@ -137,7 +136,7 @@ const Home = () => {
           </form>
         </div>
 
-        <div ref={panelRef} className="h-0 bg-white  overflow-x-hidden">
+        <div ref={panelRef} className="h-0  bg-white  overflow-x-hidden">
           <LocationSearchPanel
             setPanelOpen={setPanelOpen}
             setVehiclePanelOpen={setVehiclePanelOpen}

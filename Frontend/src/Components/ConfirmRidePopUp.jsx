@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { Link } from "react-router-dom";
 
 const ConfirmRidePopUp = ({ setConfirmRiderPanel, setRiderPopUpPanel }) => {
   const submitHandler = (e)=>{
-
+    e.preventDefault()
   }
 
   const [otp, setOtp]= useState('')
+
   return (
     <div>
-      <h1 className="text-lg font-medium text-center my-4">Confirm Ride to Start</h1>
+      <h1 className="text-xl font-medium text-center my-4">Confirm Ride to Start</h1>
+      
       <div className="w-full flex bg-gray-200 rounded-md px-2 py-2 ">
         <div className="w-3/4 flex gap-4  ">
           <div className="w-12 h-12 rounded-md overflow-hidden">
@@ -62,11 +64,11 @@ const ConfirmRidePopUp = ({ setConfirmRiderPanel, setRiderPopUpPanel }) => {
 
       <div className="w-full  mb-6 text-white">
         <form className="w-full" onSubmit={()=> submitHandler} >
-          <input onChange={(e)=>setOtp(e.target.value)} 
-          className="w-full bg-[#eee] px-8 py-3 rounded-lg text-black " type="number" placeholder="ENTER OTP" />
+          <input onChange={(e)=>setOtp(e.target.value)} value={otp}
+          className="w-full bg-[#eee] tracking-[1rem] text-lg font-semibold  px-8 py-3 rounded-lg text-black " type="number" placeholder="ENTER OTP" />
 
           <div className="w-full flex gap-3 pt-5 ">
-            <Link to={'/captain-riding'} className={`${otp.length > 3 ? '':'hidden'} w-1/2 text-lg py-2 bg-green-500 font-medium text-center rounded-lg`}>Accept</Link>
+            <Link to={'/captain-riding'} className={`${otp.length > 3 ? '':'opacity-[.60] '} w-1/2 text-lg py-2 bg-green-500 font-medium text-center rounded-lg`}>Accept</Link>
             <Link onClick={()=> setConfirmRiderPanel(false)} className="w-1/2 text-lg py-2 bg-red-500 font-medium text-center rounded-lg ">Cancel</Link>
           </div>
         </form>

@@ -1,4 +1,3 @@
-import React from 'react'
 import "remixicon/fonts/remixicon.css";
 import {Route, Routes} from 'react-router-dom'
 import Start from './pages/Start'

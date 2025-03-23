@@ -8,7 +8,7 @@ const connectToDb = require('./DB/db')
 const userRoutes = require('./routes/userRoutes')
 const captainRoutes = require('./routes/captainRoutes')
 
-connectToDb()
+connectToDb();
 
 app.use(cors())
 app.use(express.json())

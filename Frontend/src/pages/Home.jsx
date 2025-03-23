@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import  { useContext, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import "remixicon/fonts/remixicon.css";
